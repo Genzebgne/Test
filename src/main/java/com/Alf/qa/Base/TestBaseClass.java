@@ -37,14 +37,14 @@ public class TestBaseClass {
 	public static void initialization() {
 				String browserName = com.getProperty("browser");
 				if(browserName.equals("chrome")) {
-					//System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
 					driver = new ChromeDriver();
 				}else if (browserName.equals("Firefox")) {
 					System.setProperty("webdriver.gecko.driver", "driver\\geckodriver.exe");
 					driver = new FirefoxDriver();
 				} else
 				{
-					//System.setProperty("webdriver.gecko.driver","usr\\bin\\geckodriver");
+					System.setProperty("webdriver.gecko.driver","./usr/bin/geckodriver");
 					FirefoxBinary firefoxBinary = new FirefoxBinary();
 					firefoxBinary.addCommandLineOptions("--headless");
 					FirefoxOptions firefoxOptions = new FirefoxOptions();
