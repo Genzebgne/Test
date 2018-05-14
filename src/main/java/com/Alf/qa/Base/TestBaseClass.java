@@ -1,5 +1,6 @@
 package com.Alf.qa.Base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Properties;
@@ -22,7 +23,8 @@ public class TestBaseClass {
 				
 			com = new Properties();
 			try {
-			String filePath = "src\\main\\java\\com\\Alf\\qa\\config\\config.properties";
+			
+			String filePath = "."+File.separator+"src"+File.separator+"main"+File.separator+"java"+File.separator+"com"+File.separator+"Alf"+File.separator+"qa"+File.separator+"config"+File.separator+"config.properties";
 			src = new FileInputStream(System.getProperty("user", filePath));
 			com.load(src);     
 
