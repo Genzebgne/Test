@@ -44,7 +44,7 @@ public class TestBaseClass {
 					driver = new FirefoxDriver();
 				} else
 				{
-					System.setProperty("webdriver.gecko.driver","driver\\geckodriver.exe");
+					System.setProperty("webdriver.gecko.driver","usr\\bin\\geckodriver");
 					FirefoxBinary firefoxBinary = new FirefoxBinary();
 					firefoxBinary.addCommandLineOptions("--headless");
 					FirefoxOptions firefoxOptions = new FirefoxOptions();
