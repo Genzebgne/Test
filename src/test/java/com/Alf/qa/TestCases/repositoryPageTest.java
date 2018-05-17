@@ -24,10 +24,12 @@ public class repositoryPageTest extends TestBaseClass {
 	}
 
 	@Test
-	public void VerifyRepositoryPage() {
-		repoPage = new RepositoryPage();
-		repoPage.repositoryTile();
-		//return driver.getTitle();
+	public void VerifyRepositoryPage() throws Exception {
+		 repoPage = new RepositoryPage();
+		 repoPage.repositoryTile();
+		 repoPage.RepositoryFolder();
+		 repoPage.DownloadFile();
+		 Thread.sleep(5000);
 	}
 	
 	@AfterMethod

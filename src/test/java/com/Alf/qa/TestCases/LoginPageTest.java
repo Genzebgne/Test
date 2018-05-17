@@ -22,6 +22,7 @@ public class LoginPageTest extends TestBaseClass {
 	@Test(priority=1)
 	public void LoginPageTitleTest() {
     log.validateLoginPageTitle();
+    System.out.println("===Alfresco login Page Title is ==" +driver.getTitle());
     Assert.assertEquals(driver.getTitle(), "Alfresco » Login");
 	}
 	

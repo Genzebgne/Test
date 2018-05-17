@@ -26,16 +26,21 @@ public class MyFilePageTest extends TestBaseClass {
 	}
 	
 	@Test(priority=1)
-	public void VerifyHomePageTitleTest() {
+	public void VerifyHomePageTitleTest() throws Exception {
 		myfile = new MyFilePage();
 		myfile.clickMyFilePage();
-	}
-	
-	@Test(priority=2)
-	public void ListSubtitles() {
 		
+		myfile.verifyElements();
+		System.out.println("=== The following folders are foun in my file dropdown===");
+		myfile.VerifyFileFolder();
+		myfile.upload();
 	}
 	
+//	@Test(priority=2)
+//	public void ListSubtitles() {
+//		
+//	}
+//	
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();

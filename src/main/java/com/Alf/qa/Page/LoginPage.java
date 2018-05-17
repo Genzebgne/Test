@@ -27,20 +27,25 @@ public class LoginPage extends TestBaseClass {
 	}
 
 	public  String validateLoginPageTitle() {
-		return driver.getTitle();
+		 return driver.getTitle();
+		
 	}
 	
 	public  boolean ValidateLogo() {
+		boolean Logo = AlfrescoLogo.isDisplayed();
+		System.out.println(Logo);
 		return AlfrescoLogo.isDisplayed();
 	}
 	public HomePage login(String un, String pwd) {
 		username.sendKeys(un);
 		password.sendKeys(pwd);
 		loginBtn.click();
-		System.out.println("===== Title after login ======"+ driver.getTitle());
-		
 		return new HomePage();
 		
+	}
+	public void VerifyHomePageTile() {
+		
+		System.out.println("===== Title after login ======"+ driver.getTitle());
 	}
 	
 }

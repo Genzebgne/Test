@@ -1,5 +1,6 @@
 package com.Alf.qa.Page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,6 +28,25 @@ public class SharedFilePage extends TestBaseClass {
 		SharedFolder.click();
 		System.out.println("==Title of Shared Folder==" + driver.getTitle());
 		return driver.getTitle();
+		
+	}
+	public void topTitles() {
+		java.util.List<WebElement> homeElem =driver.findElements(By.xpath("//div[@class='header-bar flat-button theme-bg-2']"));
+		for(WebElement Elem:homeElem) {
+			String ele = Elem.getText();
+			System.out.println(ele);
+		}
+		
+	
+	}
+	public void SideDropdown() {
+		
+		java.util.List<WebElement> homeElem =driver.findElements(By.xpath("//div[@class='yui-b yui-resize']"));
+		for(WebElement Elem:homeElem) {
+			String ele = Elem.getText();
+			System.out.println(ele);
+		}
+		
 		
 	}
 	public void searchFileMethod() throws Exception {

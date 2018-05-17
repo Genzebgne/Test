@@ -20,14 +20,11 @@ public class HomePageTest extends TestBaseClass {
 		home =log.login(com.getProperty("user"), com.getProperty("pass"));
 	}
 	
-	@Test
-	public void VerifyHomePageTitleTest() {
-		home.VerifyHomePageTitle();
-	}
-	
-	@Test
-	public void ListSubtitles() {
+	@Test(priority =1)
+	public void HomePageTestMethod() {
+		home.Clickhomebutton();
 		home.ListPageSubTitles();
+		home.HomePageObjects();
 	}
 	
 	@AfterMethod

@@ -1,0 +1,4 @@
+Jenkin configuration 
+
+clean test -DenvName=dev -Dbrowser=jenkins -Dwebdriver.gecko.driver=/usr/bin/geckodriver
+
